@@ -8,6 +8,10 @@ import html
 import json
 import os
 import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from figuras import FIGURAS, CSS_FIG  # noqa: E402
 
 BASE = "https://informeperitoinformatico.es/oposiciones-tecnologia"
 FECHA = "2026-11-17"
@@ -401,8 +405,19 @@ def wa_link(texto):
     return f"https://wa.me/{WA}?text={quote(texto)}"
 
 
+def con_figuras(cuerpo):
+    """Inserta la figura de cada cuestión al final de su bloque."""
+    for n in range(1, 9):
+        siguiente = f'<h2 id="c{n+1}">' if n < 8 else "<h2>Qué nos enseña este examen"
+        assert cuerpo.count(siguiente) == 1, siguiente
+        cuerpo = cuerpo.replace(siguiente, FIGURAS[f"c{n}"]() + siguiente)
+    return cuerpo
+
+
 def pagina(p):
     url = f"{BASE}/{p['slug']}/"
+    if p["slug"] == "examen-practico-2025":
+        p = dict(p, cuerpo=con_figuras(p["cuerpo"]))
     texto_plano = re.sub(r"<[^>]+>", "", p["h1"])
     jsonld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "@id": url + "#articulo", "headline": texto_plano, "description": p["desc"],
@@ -445,7 +460,7 @@ def pagina(p):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<style>{CSS}</style>
+<style>{CSS}{CSS_FIG}</style>
 <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
 </head>
 <body>
