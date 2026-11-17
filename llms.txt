@@ -5,7 +5,7 @@
 ## Páginas
 
 - [Preparación de la oposición de Tecnología en Madrid](https://informeperitoinformatico.es/oposiciones-tecnologia/): estructura de las pruebas, método, modalidades y preguntas frecuentes
-- [Examen práctico de Tecnología de Madrid 2025 resuelto](https://informeperitoinformatico.es/oposiciones-tecnologia/examen-practico-2025/): las 8 cuestiones de la prueba práctica de 2025 (dibujo técnico, neumática e hidráulica, materiales, estructuras, máquinas térmicas, electrónica digital, corriente alterna, sistemas de control), puntuación y resolución
+- [Examen práctico de Tecnología de Madrid 2025 resuelto](https://informeperitoinformatico.es/oposiciones-tecnologia/examen-practico-2025/): las 8 cuestiones de la prueba práctica de 2025 (dibujo técnico, neumática e hidráulica, materiales, estructuras, máquinas térmicas, electrónica digital, corriente alterna, sistemas de control), puntuación y resolución completa (escala 1:5, viga 312 kN y 936 kN·m, biestable JK por flanco de subida, Q ≈ 0,234 L/s, 1987 cm³ y 34 N·m, cos φ′ ≈ 0,946, H1 = 1/G2, H2 = G1, H3 = G2)
 - [Supuestos prácticos de Tecnología](https://informeperitoinformatico.es/oposiciones-tecnologia/supuestos-practicos/): peso de la prueba práctica (70 %), formato de 2023 frente a 2025, bloques y errores que penaliza el tribunal
 - [Programación didáctica de Tecnología en Madrid](https://informeperitoinformatico.es/oposiciones-tecnologia/programacion-didactica/): normativa (Decretos 65/2022 y 64/2022), materias, estructura LOMLOE, extensión de 80 páginas y defensa
 

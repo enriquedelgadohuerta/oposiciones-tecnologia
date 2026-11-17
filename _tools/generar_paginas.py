@@ -28,8 +28,8 @@ PAGINAS = []
 PAGINAS.append({
     "slug": "examen-practico-2025",
     "title": "Examen práctico Tecnología Madrid 2025 resuelto | Oposiciones",
-    "desc": ("Prueba práctica de Tecnología (0590) de la Comunidad de Madrid 2025: las 8 cuestiones, "
-             "puntuación y resolución paso a paso de las que se pueden resolver con el enunciado."),
+    "desc": ("Prueba práctica de Tecnología (0590) de la Comunidad de Madrid 2025 resuelta: las 8 cuestiones "
+             "paso a paso, con escala, viga, biestable JK y diagramas de bloques."),
     "h1": "Examen práctico de Tecnología de Madrid 2025, <em>resuelto y comentado</em>",
     "eyebrow": "Oposiciones 2025 · Cuerpo 0590 · Especialidad 019",
     "resumen": ("La prueba práctica de Tecnología de la Comunidad de Madrid de 2025 tuvo 8 cuestiones sobre 10 puntos: "
@@ -38,7 +38,7 @@ PAGINAS.append({
                 "programable y material de dibujo, y había que justificar todos los cálculos."),
     "cuerpo": f"""
 <p>Este es el examen real de la <strong>primera prueba, parte A (práctica)</strong>, de las oposiciones de 2025 al Cuerpo de Profesores de Enseñanza Secundaria, especialidad Tecnología, en la Comunidad de Madrid. El enunciado oficial está publicado por la Consejería: <a href="{EXAMEN_PDF}" target="_blank" rel="noopener">descargar el PDF del examen</a>.</p>
-<p>Resuelvo paso a paso las cuestiones cuyos datos están completos en el texto del enunciado. Las que dependen de una figura (la vista de dibujo, la viga, el cronograma del biestable y los diagramas de bloques) las explico con el método que pide el tribunal, porque sin la figura cualquier número sería inventado.</p>
+<p>Resuelvo las 8 cuestiones paso a paso, con los datos de las figuras del enunciado oficial (la escala gráfica, la viga, el cronograma del biestable y los diagramas de bloques), y señalo en cada una lo que más mira el tribunal.</p>
 
 <h2>Condiciones de la prueba</h2>
 <ul>
@@ -64,8 +64,16 @@ PAGINAS.append({
 
 <h2 id="c1">Cuestión 1. Dibujo técnico (1,5 p)</h2>
 <p class="enunciado">Dada una escala gráfica de 0–25–50 cm: a) calcular la escala numérica; b) dibujar a esa escala una vista de 45 × 30 cm con un corte de 15 × 10 cm en la esquina superior derecha y un círculo de radio 5 cm centrado a (10, 10) cm de la esquina inferior izquierda; c) acotar la vista.</p>
-<p><strong>Método.</strong> La escala numérica es la relación entre la medida en el papel y la medida real, con las dos en la misma unidad: <span class="f">E = medida dibujada / medida real</span>. Se mide con la regla cuántos milímetros ocupan en el papel los 25 cm del primer tramo de la escala gráfica y se divide. Por ejemplo, si 25 cm reales ocupan 50 mm en el papel, E = 50 / 250 = 1/5 (escala 1:5).</p>
-<p>Con la escala calculada se pasan todas las medidas al papel (a 1:5, la vista de 45 × 30 cm se dibuja de 90 × 60 mm, el corte de 30 × 20 mm y el círculo de 10 mm de radio con centro a 20 mm de cada borde). En la acotación se ponen siempre las <strong>medidas reales</strong>, no las del dibujo: es el error más frecuente y el tribunal lo penaliza.</p>
+<p><strong>a) Escala numérica.</strong> Es la relación entre la medida en el papel y la medida real, en la misma unidad: <span class="f">E = medida dibujada / medida real</span>. En el enunciado impreso en A4, el tramo de 0 a 25 cm de la escala gráfica mide <strong>50 mm</strong>:</p>
+<p class="f">E = 50 mm / 250 mm = 1/5  →  <strong>escala 1:5</strong></p>
+<p>(Si el examen se imprime a otro tamaño, la escala gráfica cambia con él: por eso se mide en el propio papel, con regla, y no se supone.)</p>
+<p><strong>b) Vista a escala 1:5.</strong> Todas las medidas reales se dividen entre 5:</p>
+<ul>
+<li>Contorno de 45 × 30 cm → <strong>90 × 60 mm</strong>.</li>
+<li>Corte de la esquina superior derecha de 15 × 10 cm → <strong>30 × 20 mm</strong>.</li>
+<li>Círculo de radio 5 cm → <strong>radio 10 mm</strong> (diámetro 20 mm), con centro a <strong>20 mm</strong> del borde izquierdo y 20 mm del borde inferior.</li>
+</ul>
+<p><strong>c) Acotación.</strong> Se acota con las <strong>medidas reales</strong>, no con las del dibujo: 450 y 300 de contorno, 150 y 100 del corte, ⌀100 del círculo y 100 / 100 para situar su centro (en mm, o en cm si se indica la unidad). Es el error más frecuente y el tribunal lo penaliza, igual que repetir cotas o cruzar líneas de cota.</p>
 
 <h2 id="c2">Cuestión 2. Neumática e hidráulica (1,5 p)</h2>
 <p class="enunciado">Dos manómetros en tuberías de 10 mm y 2 mm de diámetro marcan 3·10<sup>6</sup> Pa y 5·10<sup>5</sup> Pa. El aceite tiene una densidad de 0,9 kg/L. Calcular el caudal suponiendo conducción horizontal.</p>
@@ -90,15 +98,20 @@ PAGINAS.append({
 <p><strong>b)</strong> <strong>Alotropía</strong> es la propiedad de un elemento químico de presentarse en estructuras cristalinas distintas según la temperatura o la presión. Ejemplos: el <strong>hierro</strong> (Fe α cúbico centrado en el cuerpo, Fe γ cúbico centrado en las caras y Fe δ) o el <strong>carbono</strong> (diamante y grafito).</p>
 
 <h2 id="c4">Cuestión 4. Estructuras (1,5 p)</h2>
-<p class="enunciado">Para una viga empotrada de 6 m de longitud: a) calcular las reacciones en el empotramiento; b) representar los diagramas de esfuerzo cortante y momento flector.</p>
-<p><strong>Método</strong> (las cargas concretas están en la figura del examen):</p>
-<ol>
-<li>En el empotramiento hay <strong>tres reacciones</strong>: vertical R<sub>A</sub>, horizontal H<sub>A</sub> (nula si no hay cargas horizontales) y el <strong>momento de empotramiento</strong> M<sub>A</sub>.</li>
-<li>Se plantean las ecuaciones de equilibrio: ΣF<sub>y</sub> = 0 da R<sub>A</sub> como suma de las cargas (una carga repartida q en una longitud L equivale a q·L aplicada en su centro); ΣM<sub>A</sub> = 0 da M<sub>A</sub> como suma de cada carga por su distancia al empotramiento.</li>
-<li>Diagrama de <strong>cortantes</strong>: se recorre la viga desde el extremo libre; es constante entre cargas puntuales y lineal bajo cargas repartidas.</li>
-<li>Diagrama de <strong>momentos flectores</strong>: nulo en el extremo libre y máximo en el empotramiento (igual a M<sub>A</sub>); lineal donde el cortante es constante y parabólico bajo carga repartida. Se cumple dM/dx = V.</li>
-</ol>
-<p>El tribunal puntúa el convenio de signos explícito, las secciones de cálculo bien elegidas y que el valor del diagrama en el empotramiento coincida con la reacción calculada.</p>
+<p class="enunciado">Viga en voladizo de 6 m, empotrada en su extremo izquierdo, con una carga uniformemente repartida de q = 52 kN/m en toda su longitud: a) reacciones en el empotramiento; b) diagramas de esfuerzo cortante y momento flector.</p>
+<p><strong>a) Reacciones.</strong> La carga repartida equivale a una resultante Q = q·L aplicada en el centro de la viga (a 3 m del empotramiento):</p>
+<p class="f">Q = 52 kN/m · 6 m = 312 kN</p>
+<p class="f">ΣF<sub>y</sub> = 0  →  R<sub>A</sub> = <strong>312 kN</strong> (hacia arriba)  ·  ΣF<sub>x</sub> = 0  →  H<sub>A</sub> = 0</p>
+<p class="f">ΣM<sub>A</sub> = 0  →  M<sub>A</sub> = q L² / 2 = 52 · 36 / 2 = <strong>936 kN·m</strong></p>
+<p><strong>b) Diagramas</strong>, con x medida desde el empotramiento:</p>
+<p class="f">V(x) = 312 − 52 x  [kN]  →  V(0) = 312 kN ; V(6) = 0</p>
+<p class="f">M(x) = −936 + 312 x − 26 x²  [kN·m]  →  M(0) = −936 kN·m ; M(6) = 0</p>
+<ul>
+<li>El <strong>cortante</strong> es una recta que baja de 312 kN en el empotramiento a 0 en el extremo libre.</li>
+<li>El <strong>flector</strong> es una parábola de segundo grado, siempre negativo (tracciones en la fibra superior), con su máximo en valor absoluto en el empotramiento, 936 kN·m, y tangente horizontal en el extremo libre, donde V = 0.</li>
+<li>Comprobación: dM/dx = 312 − 52x = V(x).</li>
+</ul>
+<p>El tribunal puntúa el convenio de signos explícito y que el diagrama cierre con los valores de las reacciones.</p>
 
 <h2 id="c5">Cuestión 5. Máquinas térmicas (1 p)</h2>
 <p class="enunciado">Motor de 4 cilindros, potencia efectiva de 30 CV a 6200 rpm, diámetro del pistón de 80,5 mm y carrera de 97,6 mm. Calcular a) la cilindrada total y b) el par motor.</p>
@@ -110,15 +123,29 @@ PAGINAS.append({
 <p>Error típico: usar las rpm sin pasarlas a rad/s, o mezclar milímetros y centímetros en la cilindrada.</p>
 
 <h2 id="c6">Cuestión 6. Electrónica digital (1 p)</h2>
-<p class="enunciado">Dibujar la señal de salida de un biestable a partir del cronograma de sus entradas, con Q = 0 inicialmente.</p>
-<p><strong>Método.</strong> Lo primero es identificar el tipo de biestable de la figura y si es <strong>asíncrono</strong> o <strong>síncrono</strong> (y, en ese caso, si dispara por flanco de subida o de bajada). Después se recorre el cronograma instante a instante aplicando su tabla de verdad:</p>
-<ul>
-<li><strong>RS</strong>: S = 1 pone Q a 1, R = 1 la pone a 0, ambas a 0 mantiene el estado; S = R = 1 es la combinación prohibida (o la que defina el fabricante).</li>
-<li><strong>JK</strong>: como el RS, pero con J = K = 1 la salida bascula (Q pasa a Q̅) en cada flanco activo.</li>
-<li><strong>D</strong>: en cada flanco activo, Q toma el valor de D.</li>
-<li><strong>T</strong>: con T = 1 la salida bascula en cada flanco; con T = 0 se mantiene.</li>
-</ul>
-<p>Hay que marcar en el dibujo los flancos activos del reloj: es lo que el tribunal mira para ver si se ha entendido el sincronismo.</p>
+<p class="enunciado">Dibujar la salida S = Q de un biestable JK a partir del cronograma de CLK, J y K, con Q = 0 inicialmente.</p>
+<p><strong>Identificación.</strong> Es un <strong>biestable JK síncrono</strong>; la entrada de reloj lleva el triángulo sin círculo de negación, así que <strong>dispara por flanco de subida</strong>. Solo cuentan los valores de J y K justo en cada flanco ascendente de CLK; lo que pase entre flancos (los pulsos estrechos de J) no afecta a la salida.</p>
+<p><strong>Tabla del JK:</strong> J = 0, K = 0 mantiene; J = 1, K = 0 pone Q = 1; J = 0, K = 1 pone Q = 0; J = K = 1 bascula (Q pasa a Q̅).</p>
+<table class="tabla">
+<thead><tr><th>Flanco</th><th>J</th><th>K</th><th>Acción</th><th>Q</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>0</td><td>0</td><td>Mantiene</td><td>0</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>Bascula</td><td>1</td></tr>
+<tr><td>3</td><td>0</td><td>1</td><td>Reset</td><td>0</td></tr>
+<tr><td>4</td><td>0</td><td>0</td><td>Mantiene</td><td>0</td></tr>
+<tr><td>5</td><td>1</td><td>0</td><td>Set</td><td>1</td></tr>
+<tr><td>6</td><td>1</td><td>1</td><td>Bascula</td><td>0</td></tr>
+<tr><td>7</td><td>1</td><td>1</td><td>Bascula</td><td>1</td></tr>
+<tr><td>8</td><td>1</td><td>0</td><td>Set</td><td>1</td></tr>
+<tr><td>9</td><td>1</td><td>1</td><td>Bascula</td><td>0</td></tr>
+<tr><td>10</td><td>0</td><td>1</td><td>Reset</td><td>0</td></tr>
+<tr><td>11</td><td>0</td><td>0</td><td>Mantiene</td><td>0</td></tr>
+<tr><td>12</td><td>1</td><td>1</td><td>Bascula</td><td>1</td></tr>
+<tr><td>13</td><td>1</td><td>1</td><td>Bascula</td><td>0</td></tr>
+</tbody>
+</table>
+<p>La salida S cambia solo en los flancos de subida: <strong>0 · 1 · 0 · 0 · 1 · 0 · 1 · 1 · 0 · 0 · 0 · 1 · 0</strong> (valor de Q tras cada uno de los 13 flancos). En el dibujo, cada cambio de S debe quedar alineado verticalmente con su flanco ascendente.</p>
+<p>La trampa del ejercicio: los pulsos estrechos de J que caen entre flancos. Quien dibuje S siguiendo los cambios de J en lugar del reloj pierde la cuestión entera.</p>
 
 <h2 id="c7">Cuestión 7. Corriente alterna (1 p)</h2>
 <p class="enunciado">Motor monofásico de 5 kW con cos φ = 0,7 conectado a 220 V / 50 Hz. Un condensador en paralelo reduce la corriente de línea un 26 %. Calcular a) la corriente de línea I′ y b) el nuevo factor de potencia y la expresión temporal i′(t).</p>
@@ -133,15 +160,17 @@ PAGINAS.append({
 <p>Comprobación útil para el tribunal: la potencia reactiva que aporta el condensador es Q<sub>C</sub> = P (tg φ − tg φ′) ≈ 3,39 kvar, lo que corresponde a C = Q<sub>C</sub> / (V² ω) ≈ 223 µF.</p>
 
 <h2 id="c8">Cuestión 8. Sistemas de control (1 p)</h2>
-<p class="enunciado">Determinar H<sub>1</sub>, H<sub>2</sub> y H<sub>3</sub> en función de G<sub>1</sub> y G<sub>2</sub> para que dos sistemas de control sean equivalentes.</p>
-<p><strong>Método.</strong> Se obtiene la función de transferencia global de cada diagrama con el álgebra de bloques y se igualan:</p>
-<ul>
-<li>Bloques en <strong>serie</strong>: se multiplican, G = G<sub>1</sub> · G<sub>2</sub>.</li>
-<li>Bloques en <strong>paralelo</strong>: se suman (o restan, según el signo del sumador), G = G<sub>1</sub> ± G<sub>2</sub>.</li>
-<li><strong>Realimentación negativa</strong>: G / (1 + G H); positiva: G / (1 − G H).</li>
-<li>Al <strong>mover un punto de bifurcación o un sumador</strong> a través de un bloque, hay que compensar con ese bloque o con su inverso.</li>
-</ul>
-<p>Igualando término a término las dos funciones de transferencia salen las expresiones de cada H. Conviene terminar comprobando un caso sencillo (por ejemplo, G<sub>2</sub> = 1) para detectar errores de signo.</p>
+<p class="enunciado">Figura a: X entra en un sumador (+ X, − realimentación), su salida Y pasa por G<sub>1</sub> y da Z; Z vuelve al sumador a través de G<sub>2</sub>. Figura b: X pasa por H<sub>1</sub>, entra en un sumador con realimentación unitaria negativa de Z, y su salida Y pasa por H<sub>2</sub> y H<sub>3</sub> en serie hasta Z. Determinar H<sub>1</sub>, H<sub>2</sub> y H<sub>3</sub> para que ambos sistemas sean equivalentes.</p>
+<p><strong>Figura a</strong> (realimentación negativa no unitaria):</p>
+<p class="f">Z/X = G<sub>1</sub> / (1 + G<sub>1</sub> G<sub>2</sub>)</p>
+<p><strong>Figura b</strong> (H<sub>1</sub> en serie con un lazo de realimentación unitaria cuya cadena directa es H<sub>2</sub>H<sub>3</sub>):</p>
+<p class="f">Z/X = H<sub>1</sub> · H<sub>2</sub>H<sub>3</sub> / (1 + H<sub>2</sub>H<sub>3</sub>)</p>
+<p><strong>Equivalencia.</strong> Es el paso clásico de realimentación no unitaria a unitaria. Multiplicando y dividiendo por G<sub>2</sub>:</p>
+<p class="f">G<sub>1</sub> / (1 + G<sub>1</sub>G<sub>2</sub>) = (1/G<sub>2</sub>) · G<sub>1</sub>G<sub>2</sub> / (1 + G<sub>1</sub>G<sub>2</sub>)</p>
+<p>Comparando con la figura b:</p>
+<p class="f"><strong>H<sub>1</sub> = 1/G<sub>2</sub>  ·  H<sub>2</sub> = G<sub>1</sub>  ·  H<sub>3</sub> = G<sub>2</sub></strong>  (H<sub>2</sub> y H<sub>3</sub> son intercambiables: solo importa su producto G<sub>1</sub>G<sub>2</sub>)</p>
+<p>Comprobación: (1/G<sub>2</sub>) · G<sub>1</sub>G<sub>2</sub> / (1 + G<sub>1</sub>G<sub>2</sub>) = G<sub>1</sub> / (1 + G<sub>1</sub>G<sub>2</sub>). ✓</p>
+<p><strong>Matiz para la defensa:</strong> con esta solución las salidas Z coinciden, pero la señal intermedia Y de la figura b vale Y<sub>a</sub>/G<sub>2</sub>. Si el tribunal exigiera que también coincidiera Y, saldría H<sub>2</sub>H<sub>3</sub> = G<sub>1</sub> y H<sub>1</sub> = (1 + G<sub>1</sub>)/(1 + G<sub>1</sub>G<sub>2</sub>). Comentarlo en una línea demuestra dominio del álgebra de bloques.</p>
 
 <h2>Qué nos enseña este examen para la próxima convocatoria</h2>
 <ul>
@@ -158,8 +187,12 @@ PAGINAS.append({
          "Calculadora no programable, bolígrafos de tinta azul o negra y material de dibujo. Además, todas las respuestas y cálculos debían estar justificados."),
         ("¿Dónde está el enunciado oficial del examen?",
          "La Comunidad de Madrid publicó el enunciado de la prueba práctica de la especialidad 019 (Tecnología) en su web, en el apartado de procesos selectivos de Secundaria 2025."),
-        ("¿Por qué no están resueltas con números todas las cuestiones?",
-         "Las cuestiones 1, 4, 6 y 8 dependen de una figura del examen (la escala dibujada, la viga con sus cargas, el cronograma y los diagramas de bloques). Para no inventar datos, explico el método completo que permite resolverlas."),
+        ("¿Cuál es la escala de la cuestión de dibujo técnico de 2025?",
+         "La escala gráfica del enunciado, impreso en A4, representa 25 cm reales en 50 mm de papel, así que la escala numérica es 1:5. La vista de 45 × 30 cm se dibuja de 90 × 60 mm y se acota con las medidas reales."),
+        ("¿Cuál es la salida del biestable JK de la cuestión 6?",
+         "Es un JK que dispara por flanco de subida. Partiendo de Q = 0, tras los 13 flancos la salida vale 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0. Los pulsos estrechos de J entre flancos no influyen."),
+        ("¿Qué reacciones tiene la viga empotrada de la cuestión 4?",
+         "Con 52 kN/m en 6 m, la reacción vertical es de 312 kN y el momento de empotramiento de 936 kN·m. El cortante baja linealmente de 312 kN a 0 y el flector es una parábola de −936 kN·m a 0."),
     ],
     "relacionadas": ["supuestos-practicos", "programacion-didactica"],
 })
